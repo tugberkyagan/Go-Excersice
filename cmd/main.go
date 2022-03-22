@@ -83,5 +83,14 @@ func main() {
 	// SubTodo Routers
 	app.Get("/subTodo/all", subTodoHandler.GetAllSubTodos)
 
+	app.Get("/subTodo/:id", subTodoHandler.GetSubTodoById)
+
+	app.Post("/subTodo/create", subTodoHandler.CreateSubTodo)
+
+	app.Delete("/subTodo/delete/:id", subTodoHandler.DeleteSubTodoById)
+
+	app.Put("/subTodo/update/:id", subTodoHandler.UpdateSubTodoById)
+
+	// Event Listener
 	app.Listen(":3000")
 }
