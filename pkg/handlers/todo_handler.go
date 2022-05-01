@@ -58,6 +58,7 @@ func (h TodoHandlerStruct) CreateTodo(c *fiber.Ctx) error {
 }
 
 func (h TodoHandlerStruct) DeleteTodoById(c *fiber.Ctx) error {
+
 	id, err := c.ParamsInt("id")
 
 	if err != nil {
